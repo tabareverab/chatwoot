@@ -34,9 +34,9 @@ By default, it renders:
     <% if content_for?(:head) %>
       <%= yield(:head) %>
     <% else %>
-      <title><%= @portal.page_title%></title>
+      <title>O Chat</title>
     <% end %>
-    
+
     <% if @portal.logo.present? %>
       <link rel="icon" href="<%= url_for(@portal.logo) %>">
     <% end %>
@@ -81,7 +81,7 @@ By default, it renders:
             img.src = '<%= request.base_url %>/hc/<%= @portal.slug %>/articles/<%= @article.slug %>.png';
           }
         };
-        
+
         const addTrackingListeners = function() {
           const events = ['mouseenter', 'touchstart', 'focus'];
           events.forEach(event => {
